@@ -1,0 +1,82 @@
+<!doctype html>
+<html>
+<head>
+	<title>Nova Global Visa - Profile Company</title>
+	<script type="text/javascript" src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
+	<script src="turn.js"></script>
+	<link rel="icon" href="https://images.careerbuilder.vn/employer_folders/lot2/268802/150620logonovaglobalvisafinal.png">
+	<style type="text/css">
+		body {
+			background: #ccc;
+		}
+
+		#paper {
+			width: 896px;
+			height: 640px;
+		}
+
+		#paper .turn-page {
+			background-color: #ccc;
+			background-size: 100% 100%;
+		}
+
+		.image-page{
+			height: 100%;
+			width: 100%;
+		}
+	</style>
+</head>
+<body>
+	<center>
+		<div id="paper">
+			<div style="background-image:url(pages/1.png);"></div>
+			<div style="background-image:url(pages/21.png);"></div>
+			<div style="background-image:url(pages/1.png);"></div>
+			<div style="background-image:url(pages/2.png);"></div>
+			<div style="background-image:url(pages/3.png);"></div>
+			<div style="background-image:url(pages/4.png);"></div>
+			<div style="background-image:url(pages/5.png);"></div>
+			<div style="background-image:url(pages/6.png);"></div>
+			<div style="background-image:url(pages/7.png);"></div>
+			<div style="background-image:url(pages/8.png);"></div>
+			<div style="background-image:url(pages/9.png);"></div>
+			<div style="background-image:url(pages/10.png);"></div>
+			<div style="background-image:url(pages/11.png);"></div>
+			<div style="background-image:url(pages/12.png);"></div>
+			<div style="background-image:url(pages/13.png);"></div>
+			<div style="background-image:url(pages/14.png);"></div>
+			<div style="background-image:url(pages/15.png);"></div>
+			<div style="background-image:url(pages/16.png);"></div>
+			<div style="background-image:url(pages/17.png);"></div>
+			<div style="background-image:url(pages/18.png);"></div>
+			<div style="background-image:url(pages/19.png);"></div>
+			<div style="background-image:url(pages/20.png);"></div>
+			<div style="background-image:url(pages/21.png);"></div>
+		</div>
+	</center>
+
+
+	<script type="text/javascript">
+		$(window).ready(function () {
+			$('#paper').turn({
+				display: 'double',
+				acceleration: true,
+				gradients: !$.isTouch,
+				elevation: 200,
+				duration: 1300,
+				when: {
+					turned: function (e, page) {
+					}
+				}
+			});
+		});
+
+		$(window).bind('keydown', function (e) {
+			if (e.keyCode == 37)
+				$('#paper').turn('next');
+			else if (e.keyCode == 39)
+				$('#paper').turn('previous');
+		});
+	</script>
+</body>
+</html>
